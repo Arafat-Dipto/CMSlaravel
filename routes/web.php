@@ -27,17 +27,9 @@ Route::group(['prefix'=>'admin'],function() {
     Route::post('/login', 'AdminController@login')->name('admin.login');
     Route::get('/logout', 'AdminController@logout')->name('admin.logout');
     Route::get('/dashboard','AdminController@index')->name('admin.dashboard');
-
-
-
-
     Route::get('/action','AdminDashboardController@action');
     Route::get('/post/create','AdminDashboardController@createPostShow');
     Route::post('/post/create','AdminDashboardController@createPost')->name('admin.postcreate');
-
-
-
-
     Route::post('/video/create','AdminDashboardController@createVideo')->name('admin.videocreate');
     Route::get('/post','AdminDashboardController@showPost');
     Route::get('/post/{id}/unpublishPost','AdminDashboardController@unpublishPost');

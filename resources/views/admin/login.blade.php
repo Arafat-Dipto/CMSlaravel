@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="login container">
+    <div class="login container" style="margin-top: 150px; margin-bottom: 204px;">
         <h2 class="text-center">Admin Login</h2>
         @include('partials.errors')
         <form class="form-group" action="{{ route('admin.login') }}" method="POST">

@@ -24,7 +24,7 @@ class UserController extends Controller
     }
 
     public function videoView($id){
-        $video = \App\Video::find($id);
+        $video = \App\Video::findOrFail($id);
 
         return view('videoContent',compact('video'));
     }
